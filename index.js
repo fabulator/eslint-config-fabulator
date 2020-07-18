@@ -15,7 +15,7 @@ module.exports = {
         'import/resolver': {
             node: {
                 moduleDirectory: ['node_modules', 'src'],
-                extensions: ['.js', '.ts', '.tsx'],
+                extensions: ['.js', '.ts', '.tsx', '.d.ts'],
             },
         },
         'polyfills': ['fetch', 'promises'],
