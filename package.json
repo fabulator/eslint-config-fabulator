@@ -1,5 +1,5 @@
 {
-  "name": "fabulator-eslint-config",
+  "name": "eslint-config-fabulator",
   "version": "0.1.0",
   "description": "Shared ESLint config for fabulator projects",
   "keywords": [
@@ -7,13 +7,13 @@
     "eslint-config",
     "eslintconfig"
   ],
-  "homepage": "https://github.com/fabulator/fabulator-eslint-config",
+  "homepage": "https://github.com/fabulator/eslint-config-fabulator",
   "bugs": {
-    "url": "https://github.com/fabulator/fabulator-eslint-config/issues"
+    "url": "https://github.com/fabulator/eslint-config-fabulator/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabulator/fabulator-eslint-config.git"
+    "url": "https://github.com/fabulator/eslint-config-fabulator.git"
   },
   "license": "Apache-2.0",
   "author": "Michal Ozogán <michal@ozogan.eu>",
