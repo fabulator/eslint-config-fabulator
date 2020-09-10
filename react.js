@@ -8,6 +8,7 @@ module.exports = {
         'react/prefer-stateless-function': 0, // it should be converter by transpiler
         'react/jsx-fragments': 0, // from with the fragments on Webstorm
         'react/jsx-props-no-spreading': 0,
+        'react/require-default-props': 0,
         'react/destructuring-assignment': 0, //  no need to destruct everything
         'jsx-a11y/label-has-for': 0, // still rules have some kind of bug. Label have set for, but lint throws an error.
         'jsx-a11y/click-events-have-key-events': 0, // we don't need to be perfect

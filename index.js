@@ -60,6 +60,7 @@ module.exports = {
         'unicorn/consistent-function-scoping': 0,
         'unicorn/no-abusive-eslint-disable': 0, // sometimes it's just need
         'unicorn/filename-case': 0,
+        'unicorn/no-fn-reference-in-iterator': 0,
         'unicorn/no-null': 0,
         'import/prefer-default-export': 0, // In some cases it is not need
         'import/extensions': [2, { ts: 'never', tsx: 'never' }],
