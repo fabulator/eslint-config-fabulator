@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.1.1 (2020-09-12)
+### Fixed
+- [9acd1f2](https://github.com/fabulator/eslint-config-fabulator/commit/9acd1f219a7f2309078b702a203d93477890530b) rules in conflict with typescript
+
 ## v1.1.0 (2020-09-10)
 ### Changed
 - [f7a8d34](https://github.com/fabulator/eslint-config-fabulator/commit/f7a8d3401cc07ea0f7e83e2dcb4742747aa3c453) Disable some rules
