@@ -90,6 +90,7 @@ module.exports = {
                 '@typescript-eslint/no-namespace': 0,
                 '@typescript-eslint/no-parameter-properties': 0,
                 '@typescript-eslint/ban-ts-ignore': 0,
+                'no-shadow': 0, // conflict with typescript
             },
         },
         {
