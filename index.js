@@ -70,6 +70,7 @@ module.exports = {
         'import/no-extraneous-dependencies': [2, { devDependencies: ['**/*.test.*', '**/*.config.js', '**/*.config.*'] }],
         'jsx-a11y/anchor-is-valid': 0, // rule does not exist
         'prettier/prettier': ['error', { printWidth: 140, tabWidth: 4, singleQuote: true, quoteProps: 'consistent', trailingComma: 'all' }],
+        'sonarjs/no-nested-template-literals': 0,
     },
     overrides: [
         {
