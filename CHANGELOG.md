@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.2.0 (2021-07-18)
+### Changed
+- [f6e4ef7](https://github.com/fabulator/eslint-config-fabulator/commit/f6e4ef71534540ee209adf441ce093362b121f5c) Upraged dependencies
+
 ## v1.1.1 (2020-09-12)
 ### Fixed
 - [9acd1f2](https://github.com/fabulator/eslint-config-fabulator/commit/9acd1f219a7f2309078b702a203d93477890530b) rules in conflict with typescript
