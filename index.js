@@ -62,6 +62,8 @@ module.exports = {
         'unicorn/filename-case': 0,
         'unicorn/no-fn-reference-in-iterator': 0,
         'unicorn/no-null': 0,
+        'unicorn/prefer-module': 0,
+        'unicorn/no-array-for-each': 0,
         'import/prefer-default-export': 0, // In some cases it is not need
         'import/extensions': [2, { ts: 'never', tsx: 'never' }],
         'import/no-dynamic-require': 0, // we need dynamic import of chunks...
