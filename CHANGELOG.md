@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.2.3 (2021-07-18)
+### Fixed
+- [9f3df0b](https://github.com/fabulator/eslint-config-fabulator/commit/9f3df0b8b8962667991e24bc623bd55128b0ad5d) Disabled unused rule
+
 ## v1.2.2 (2021-07-18)
 ### Fixed
 - [b84b6d0](https://github.com/fabulator/eslint-config-fabulator/commit/b84b6d017855c0769310b61c462fc0ec71438b1e) audit
