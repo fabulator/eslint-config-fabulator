@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.2.1 (2021-07-18)
+### Fixed
+- [a0e8b87](https://github.com/fabulator/eslint-config-fabulator/commit/a0e8b879d97d0af2bbaec6da1827e609f1a75735) Disable nested templates rule
+
 ## v1.2.0 (2021-07-18)
 ### Changed
 - [f6e4ef7](https://github.com/fabulator/eslint-config-fabulator/commit/f6e4ef71534540ee209adf441ce093362b121f5c) Upraged dependencies
