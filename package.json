@@ -49,9 +49,9 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "commitlint-config-fabulator": "^1.1.0",
+    "commitlint-config-fabulator": "^2.0.1",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "semantic-release-config-fabulator": "^2.6.1"
+    "semantic-release-config-fabulator": "^2.6.2"
   }
 }
