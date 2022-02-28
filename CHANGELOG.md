@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.3.4 (2022-02-28)
+### Fixed
+- [608c6f1](https://github.com/fabulator/eslint-config-fabulator/commit/608c6f11f8bebd29d2d8de469bc50b2822dcdeed) Update lock to make security bots happy.
+
 ## v1.3.3 (2022-02-21)
 ### Fixed
 - [8281095](https://github.com/fabulator/eslint-config-fabulator/commit/8281095b8229138e26c26f3d1db2fd20a84335a3) Update lock to make security bots happy.
