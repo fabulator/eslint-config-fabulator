@@ -54,17 +54,6 @@ module.exports = {
         'array-func/no-unnecessary-this-arg': 2,
         'array-func/prefer-array-from': 0, // I don't like it
         'array-func/avoid-reverse': 2,
-        'unicorn/catch-error-name': [2, { name: 'exception' }],
-        'unicorn/no-reduce': 0, // no reason for the rule
-        'unicorn/prevent-abbreviations': 0,
-        'unicorn/consistent-function-scoping': 0,
-        'unicorn/no-abusive-eslint-disable': 0, // sometimes it's just need
-        'unicorn/filename-case': 0,
-        'unicorn/no-fn-reference-in-iterator': 0,
-        'unicorn/no-null': 0,
-        'unicorn/prefer-module': 0,
-        'unicorn/no-array-for-each': 0,
-        'unicorn/prefer-node-protocol': 0,
         'import/prefer-default-export': 0, // In some cases it is not need
         'import/extensions': [2, { ts: 'never', tsx: 'never' }],
         'import/no-dynamic-require': 0, // we need dynamic import of chunks...
@@ -127,7 +116,6 @@ module.exports = {
         'import',
         'promise',
         'compat',
-        'unicorn',
         'filenames',
         'array-func',
         '@typescript-eslint',
