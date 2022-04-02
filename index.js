@@ -6,7 +6,6 @@ module.exports = {
     extends: [
         'airbnb',
         'plugin:promise/recommended',
-        'plugin:unicorn/recommended',
         'plugin:jsx-a11y/recommended',
         'plugin:sonarjs/recommended',
         'plugin:prettier/recommended',
