@@ -60,6 +60,8 @@ module.exports = {
         'jsx-a11y/anchor-is-valid': 0, // rule does not exist
         'prettier/prettier': ['error', { printWidth: 140, tabWidth: 4, singleQuote: true, quoteProps: 'consistent', trailingComma: 'all' }],
         'sonarjs/no-nested-template-literals': 0,
+        // TODO: :( extending airbnb with react
+        'react/function-component-definition': 0,
     },
     overrides: [
         {
