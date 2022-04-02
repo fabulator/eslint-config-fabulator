@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.4.0 (2022-04-02)
+### Changed
+- [7c9f666](https://github.com/fabulator/eslint-config-fabulator/commit/7c9f6668f229b14ffe6ed8aa74a0243ff95937e1) Remove unicorn plugin
+
 ## v1.3.9 (2022-03-28)
 ### Fixed
 - [57ddffa](https://github.com/fabulator/eslint-config-fabulator/commit/57ddffa5bdc5f8f02da4ac81bb2754adacab7692) Update lock to make security bots happy.
