@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.5.0 (2022-04-02)
+### Fixed
+- [2dc3038](https://github.com/fabulator/eslint-config-fabulator/commit/2dc303872584f88f5f960611f54903196682d35c) Airbnb react rules
+
+### Changed
+- [f6f27cc](https://github.com/fabulator/eslint-config-fabulator/commit/f6f27ccfbd8c5272b4db02cd84528e416a500a3e) Update actions/checkout action to v3
+- [31f5345](https://github.com/fabulator/eslint-config-fabulator/commit/31f534584e2d3d6372dfa91ea17701a1b81cffdb) Update actions/setup-node action to v3
+
 ## v1.4.0 (2022-04-02)
 ### Changed
 - [7c9f666](https://github.com/fabulator/eslint-config-fabulator/commit/7c9f6668f229b14ffe6ed8aa74a0243ff95937e1) Remove unicorn plugin
