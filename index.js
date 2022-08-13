@@ -17,7 +17,6 @@ module.exports = {
                 extensions: ['.js', '.ts', '.tsx', '.d.ts'],
             },
         },
-        'polyfills': ['fetch', 'promises'],
     },
     rules: {
         'indent': 0, // checked by prettier
@@ -47,7 +46,6 @@ module.exports = {
         'promise/no-callback-in-promise': 1,
         'promise/prefer-await-to-callbacks': 2,
         'promise/prefer-await-to-then': 2,
-        'compat/compat': 2,
         'filenames/match-exported': [2, null, '\\.config$'],
         'array-func/from-map': 2,
         'array-func/no-unnecessary-this-arg': 2,
@@ -116,7 +114,6 @@ module.exports = {
     plugins: [
         'import',
         'promise',
-        'compat',
         'filenames',
         'array-func',
         '@typescript-eslint',
