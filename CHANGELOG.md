@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v1.6.0 (2022-08-13)
+### Changed
+- [2bf16cb](https://github.com/fabulator/eslint-config-fabulator/commit/2bf16cb105000f58b410b393074f81ec1e1e7e66) Remove compat plugin
+- [5dc067b](https://github.com/fabulator/eslint-config-fabulator/commit/5dc067b186b5b1e4a08bac08daa15b5e15e29066) Update dev dependency jest to v28  (#33)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v1.5.0 (2022-04-02)
 ### Fixed
 - [2dc3038](https://github.com/fabulator/eslint-config-fabulator/commit/2dc303872584f88f5f960611f54903196682d35c) Airbnb react rules
