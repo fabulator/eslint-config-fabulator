@@ -1,6 +1,21 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.0.0 (2022-10-02)
+### Changed
+- [fc1573e](https://github.com/fabulator/eslint-config-fabulator/commit/fc1573e65e78889c1e9cb316df80b78b7b841cf4) Update dependency eslint-plugin-jest to v27 BREAKING (#58)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [65605a7](https://github.com/fabulator/eslint-config-fabulator/commit/65605a7c60797d793dd5ced79e5598fd0c54434f) Update dev dependency semantic-release-config-fabulator to v5  (#55)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [5911976](https://github.com/fabulator/eslint-config-fabulator/commit/591197622dab518712b60f54d4475d8d138d5894) Update dev dependency semantic-release-config-fabulator to v4  (#53)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [7446e14](https://github.com/fabulator/eslint-config-fabulator/commit/7446e147355ffa7c57cd4f4d9a74adda9daa33b7) Update dev dependency commitlint-config-fabulator to v5  (#52)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v1.6.0 (2022-08-13)
 ### Changed
 - [2bf16cb](https://github.com/fabulator/eslint-config-fabulator/commit/2bf16cb105000f58b410b393074f81ec1e1e7e66) Remove compat plugin
