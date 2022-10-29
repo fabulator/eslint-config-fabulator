@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.2.1 (2022-10-29)
+### Fixed
+- [2694f76](https://github.com/fabulator/eslint-config-fabulator/commit/2694f76b1944bd0acdbb6305972970fc43eb97fc) Path for name exports
+
 ## v2.2.0 (2022-10-29)
 ### Changed
 - [b9d0cf7](https://github.com/fabulator/eslint-config-fabulator/commit/b9d0cf7c25f61ddcdddc946a1db9f5506729c785) Use typed linter
