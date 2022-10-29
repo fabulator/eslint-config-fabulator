@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.1.0 (2022-10-29)
+### Changed
+- [4a4a675](https://github.com/fabulator/eslint-config-fabulator/commit/4a4a6751ab8153e6cb63bcbc93f978338846b86c) Remove solarjs
+
 ## v2.0.0 (2022-10-02)
 ### Changed
 - [fc1573e](https://github.com/fabulator/eslint-config-fabulator/commit/fc1573e65e78889c1e9cb316df80b78b7b841cf4) Update dependency eslint-plugin-jest to v27 BREAKING (#58)
