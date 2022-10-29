@@ -3,12 +3,7 @@ const reactConfig = require('./react');
 
 /* eslint-disable max-len */
 module.exports = {
-    extends: [
-        'airbnb',
-        'plugin:promise/recommended',
-        'plugin:jsx-a11y/recommended',
-        'plugin:prettier/recommended',
-    ],
+    extends: ['airbnb', 'plugin:promise/recommended', 'plugin:jsx-a11y/recommended', 'plugin:prettier/recommended'],
     settings: {
         'import/resolver': {
             node: {
@@ -110,14 +105,5 @@ module.exports = {
         es6: true,
         browser: true,
     },
-    plugins: [
-        'import',
-        'promise',
-        'filenames',
-        'array-func',
-        '@typescript-eslint',
-        'typescript-sort-keys',
-        'prettier',
-        'json-format',
-    ],
+    plugins: ['import', 'promise', 'filenames', 'array-func', '@typescript-eslint', 'typescript-sort-keys', 'prettier', 'json-format'],
 };
