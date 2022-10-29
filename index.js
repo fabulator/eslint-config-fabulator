@@ -81,6 +81,12 @@ module.exports = {
             },
         },
         {
+            files: ['*.config.*'],
+            rules: {
+                'filenames/match-exported': 0,
+            },
+        },
+        {
             files: ['*.test.*'],
             ...jestConfig,
         },
