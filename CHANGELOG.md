@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.2.0 (2022-10-29)
+### Changed
+- [b9d0cf7](https://github.com/fabulator/eslint-config-fabulator/commit/b9d0cf7c25f61ddcdddc946a1db9f5506729c785) Use typed linter
+
+### Fix
+- [6d5c904](https://github.com/fabulator/eslint-config-fabulator/commit/6d5c904222918728781939851ccc160cb60b840f) max length attribute
+
 ## v2.1.0 (2022-10-29)
 ### Changed
 - [4a4a675](https://github.com/fabulator/eslint-config-fabulator/commit/4a4a6751ab8153e6cb63bcbc93f978338846b86c) Remove solarjs
