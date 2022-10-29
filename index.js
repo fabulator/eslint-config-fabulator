@@ -14,7 +14,7 @@ module.exports = {
     },
     rules: {
         'indent': 0, // checked by prettier
-        'max-len': [2, 140],
+        'max-len': 0, // checked by prettier
         'no-console': 'warn',
         'complexity': [1, 6],
         'curly': [2, 'all'],
