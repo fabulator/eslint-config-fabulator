@@ -7,7 +7,6 @@ module.exports = {
         'airbnb',
         'plugin:promise/recommended',
         'plugin:jsx-a11y/recommended',
-        'plugin:sonarjs/recommended',
         'plugin:prettier/recommended',
     ],
     settings: {
@@ -47,7 +46,6 @@ module.exports = {
         'promise/prefer-await-to-callbacks': 2,
         'promise/prefer-await-to-then': 2,
         'filenames/match-exported': [2, null, '\\.config$'],
-        'array-func/from-map': 2,
         'array-func/no-unnecessary-this-arg': 2,
         'array-func/prefer-array-from': 0, // I don't like it
         'array-func/avoid-reverse': 2,
@@ -57,9 +55,10 @@ module.exports = {
         'import/no-extraneous-dependencies': [2, { devDependencies: ['**/*.test.*', '**/*.config.js', '**/*.config.*'] }],
         'jsx-a11y/anchor-is-valid': 0, // rule does not exist
         'prettier/prettier': ['error', { printWidth: 140, tabWidth: 4, singleQuote: true, quoteProps: 'consistent', trailingComma: 'all' }],
-        'sonarjs/no-nested-template-literals': 0,
         // TODO: :( extending airbnb with react
         'react/function-component-definition': 0,
+        'array-func/from-map': 0,
+        'no-irregular-whitespace': 0,
     },
     overrides: [
         {
@@ -117,7 +116,6 @@ module.exports = {
         'filenames',
         'array-func',
         '@typescript-eslint',
-        'sonarjs',
         'typescript-sort-keys',
         'prettier',
         'json-format',
