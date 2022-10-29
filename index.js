@@ -40,7 +40,7 @@ module.exports = {
         'promise/no-callback-in-promise': 1,
         'promise/prefer-await-to-callbacks': 2,
         'promise/prefer-await-to-then': 2,
-        'filenames/match-exported': [2, null, '\\.config$'],
+        'filenames/match-exported': [2, null, '\\.config.js$'],
         'array-func/no-unnecessary-this-arg': 2,
         'array-func/prefer-array-from': 0, // I don't like it
         'array-func/avoid-reverse': 2,
@@ -54,12 +54,13 @@ module.exports = {
         'react/function-component-definition': 0,
         'array-func/from-map': 0,
         'no-irregular-whitespace': 0,
+        'func-names': 0,
     },
     overrides: [
         {
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
-            extends: ['plugin:@typescript-eslint/recommended'],
+            extends: ['plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking'],
             rules: {
                 'typescript-sort-keys/interface': 2,
                 'typescript-sort-keys/string-enum': 2,
