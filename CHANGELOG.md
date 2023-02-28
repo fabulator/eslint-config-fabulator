@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.3.0 (2023-02-28)
+### Changed
+- [532c6f6](https://github.com/fabulator/eslint-config-fabulator/commit/532c6f68aa54136f51824f58be0d9a8ffb9dee35) Update packages
+
 ## v2.2.1 (2022-10-29)
 ### Fixed
 - [2694f76](https://github.com/fabulator/eslint-config-fabulator/commit/2694f76b1944bd0acdbb6305972970fc43eb97fc) Path for name exports
