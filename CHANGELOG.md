@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.0.0 (2023-03-23)
+### Changed
+- [6becf33](https://github.com/fabulator/eslint-config-fabulator/commit/6becf339dd07d75da4b09dc285e2eed91d5e5692) Make typescript a peer dependency BREAKING
+
 ## v2.3.0 (2023-02-28)
 ### Changed
 - [532c6f6](https://github.com/fabulator/eslint-config-fabulator/commit/532c6f68aa54136f51824f58be0d9a8ffb9dee35) Update packages
