@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.1.0 (2023-04-20)
+### Changed
+- [dff9d98](https://github.com/fabulator/eslint-config-fabulator/commit/dff9d984f7f07f9d06409c7a6f469befdfbb30f1) disable react/function-component-definition
+
 ## v3.0.0 (2023-03-23)
 ### Changed
 - [6becf33](https://github.com/fabulator/eslint-config-fabulator/commit/6becf339dd07d75da4b09dc285e2eed91d5e5692) Make typescript a peer dependency BREAKING
