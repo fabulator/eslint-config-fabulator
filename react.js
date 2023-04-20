@@ -13,7 +13,7 @@ module.exports = {
         'jsx-a11y/label-has-for': 0, // still rules have some kind of bug. Label have set for, but lint throws an error.
         'jsx-a11y/click-events-have-key-events': 0, // we don't need to be perfect
         'jsx-a11y/href-no-hash': 0, // Definition for rule 'jsx-a11y/href-no-hash' was not found
-        'react/function-component-definition': 2,
+        'react/function-component-definition': 0,
         'react/react-in-jsx-scope': 0,
         'react/prop-types': 0,
     },
