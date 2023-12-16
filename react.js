@@ -1,27 +1,44 @@
 module.exports = {
-    rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        'react/sort-comp': [1, { order: ['type-annotations', 'static-methods', 'lifecycle', 'everything-else', 'render'] }],
-        'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
-        'react/jsx-curly-brace-presence': [2, { props: 'always', children: 'never' }],
-        'react/prefer-stateless-function': 0, // it should be converter by transpiler
-        'react/jsx-fragments': 0, // from with the fragments on Webstorm
-        'react/jsx-props-no-spreading': 0,
-        'react/require-default-props': 0,
-        'react/destructuring-assignment': 0, //  no need to destruct everything
-        'jsx-a11y/label-has-for': 0, // still rules have some kind of bug. Label have set for, but lint throws an error.
-        'jsx-a11y/click-events-have-key-events': 0, // we don't need to be perfect
-        'jsx-a11y/href-no-hash': 0, // Definition for rule 'jsx-a11y/href-no-hash' was not found
-        'react/function-component-definition': 0,
-        'react/react-in-jsx-scope': 0,
-        'react/prop-types': 0,
-    },
-    plugins: ['react'],
-    settings: {
-        react: {
-            pragma: 'React',
-            version: '16.7',
-        },
-    },
+  extends: [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+  ],
+  rules: {
+    "jsx-a11y/label-has-associated-control": [2, { assert: "htmlFor" }],
+    "react/button-has-type": "error",
+    "react/display-name": 0,
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+    ],
+    "react/jsx-max-props-per-line": [
+      "error",
+      { maximum: 1, when: "multiline" },
+    ],
+    "react/jsx-no-constructed-context-values": 0,
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-sort-props": [
+      2,
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+      },
+    ],
+    "react/no-array-index-key": "error",
+    "react/no-danger": "error",
+    "react/no-typos": "error",
+    "react/no-unstable-nested-components": ["error", { allowAsProps: true }],
+    "react/no-unused-class-component-methods": "error",
+    "react/no-unused-prop-types": 0,
+    "react/prefer-stateless-function": "error",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "react/state-in-constructor": "error",
+  },
 };
