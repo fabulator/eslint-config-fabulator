@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v4.0.0 (2023-12-16)
+### Fixed
+- [3b2fa3f](https://github.com/fabulator/eslint-config-fabulator/commit/3b2fa3fe3b1f694d677c786dcec30b7369833a00) formatting
+
+### Changed
+- [84e0c6f](https://github.com/fabulator/eslint-config-fabulator/commit/84e0c6fac7572bffda067eaae1e60d9ed32ce20d) Use recommended settings for plugins BREAKING
+
 ## v3.2.0 (2023-12-16)
 ### Changed
 - [d54b311](https://github.com/fabulator/eslint-config-fabulator/commit/d54b311c2537244edd9b81d18193fda4ea1b2451) Bump dependencies
