@@ -26,7 +26,6 @@
     "test-and-lint": "npm run test && npm run lint"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.23.3",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8.56.0",
