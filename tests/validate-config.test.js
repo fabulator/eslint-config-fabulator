@@ -3,12 +3,12 @@ const fs = require("fs");
 
 function getErrors(configFile) {
   const cli = new ESLint({
-    overrideConfigFile: configFile,
     overrideConfig: {
       env: {
         node: true,
-      }
-    }
+      },
+    },
+    overrideConfigFile: configFile,
   });
 
   return cli.lintText(fs.readFileSync("./jest.js", "utf8"));
