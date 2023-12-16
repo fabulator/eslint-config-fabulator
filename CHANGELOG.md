@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v4.0.1 (2023-12-16)
+### Fixed
+- [24a5a9e](https://github.com/fabulator/eslint-config-fabulator/commit/24a5a9edcf9d3c48c241eb9ed63423b13cbdf743) Remove unsed dependency
+
 ## v4.0.0 (2023-12-16)
 ### Fixed
 - [3b2fa3f](https://github.com/fabulator/eslint-config-fabulator/commit/3b2fa3fe3b1f694d677c786dcec30b7369833a00) formatting
