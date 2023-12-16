@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.2.0 (2023-12-16)
+### Changed
+- [d54b311](https://github.com/fabulator/eslint-config-fabulator/commit/d54b311c2537244edd9b81d18193fda4ea1b2451) Bump dependencies
+- [db40b4f](https://github.com/fabulator/eslint-config-fabulator/commit/db40b4ffe8643ba1b7e7e32696d5c93ff33cedf0) Bump dependencies
+
 ## v3.1.0 (2023-04-20)
 ### Changed
 - [dff9d98](https://github.com/fabulator/eslint-config-fabulator/commit/dff9d984f7f07f9d06409c7a6f469befdfbb30f1) disable react/function-component-definition
