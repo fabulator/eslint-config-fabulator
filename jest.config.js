@@ -1,3 +1,3 @@
 module.exports = {
-  resolver: "./jest.resolver.config.js",
+  resolver: './jest.resolver.config.js',
 };
