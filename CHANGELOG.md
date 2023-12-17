@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v4.1.0 (2023-12-17)
+### Changed
+- [9fabc21](https://github.com/fabulator/eslint-config-fabulator/commit/9fabc217e4c7c166e963f078ecc725f57a8739b2) Update rules
+- [5b3da45](https://github.com/fabulator/eslint-config-fabulator/commit/5b3da452de18f787e52c4c9fa2476a1010890bd9) Update rules
+
 ## v4.0.1 (2023-12-16)
 ### Fixed
 - [24a5a9e](https://github.com/fabulator/eslint-config-fabulator/commit/24a5a9edcf9d3c48c241eb9ed63423b13cbdf743) Remove unsed dependency
