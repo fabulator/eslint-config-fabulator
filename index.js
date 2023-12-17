@@ -37,6 +37,21 @@ module.exports = {
       ],
       files: ["*.tsx", "*.ts"],
       parser: "@typescript-eslint/parser",
+      rules: {
+        "@typescript-eslint/non-nullable-type-assertion-style": "error",
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            args: 'all',
+            argsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
+            vars: 'all',
+          },
+        ],
+        '@typescript-eslint/prefer-optional-chain': 'error',
+      }
     },
     {
       files: ["*.json"],
@@ -54,5 +69,18 @@ module.exports = {
   rules: {
     "canonical/filename-no-index": "error",
     "filenames/match-exported": [2, null, "\\.config.js$"],
+    'canonical/destructuring-property-newline': 0,
+    'canonical/export-specifier-newline': 0,
+    'canonical/import-specifier-newline': 0,
+    'no-irregular-whitespace': 0,
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+      },
+    ],
+    'sonarjs/no-duplicate-string': 0,
+    'sonarjs/no-nested-template-literals': 0,
+
   },
 };
