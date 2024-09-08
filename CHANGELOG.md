@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v4.2.0 (2024-09-08)
+### Changed
+- [51c17cf](https://github.com/fabulator/eslint-config-fabulator/commit/51c17cf725d9b34d1a2158d7c9c3ba3f9e50e8b6) Bump dependencies
+
 ## v4.1.0 (2023-12-17)
 ### Changed
 - [9fabc21](https://github.com/fabulator/eslint-config-fabulator/commit/9fabc217e4c7c166e963f078ecc725f57a8739b2) Update rules
