@@ -5,7 +5,7 @@ const reactConfig = require('./react');
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:sonarjs/recommended',
+    'plugin:sonarjs/recommended-legacy',
     'plugin:canonical/recommended',
     'plugin:import/recommended',
     'plugin:array-func/recommended',
