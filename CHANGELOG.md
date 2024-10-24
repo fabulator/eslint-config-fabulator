@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v4.3.0 (2024-10-24)
+### Changed
+- [8b8aef0](https://github.com/fabulator/eslint-config-fabulator/commit/8b8aef01f3329c335951a1f1ec5ea49496bc9282) Remove sonarjs - too louzy
+
 ## v4.2.0 (2024-09-08)
 ### Changed
 - [51c17cf](https://github.com/fabulator/eslint-config-fabulator/commit/51c17cf725d9b34d1a2158d7c9c3ba3f9e50e8b6) Bump dependencies
