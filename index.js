@@ -5,7 +5,6 @@ const reactConfig = require('./react');
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:sonarjs/recommended-legacy',
     'plugin:canonical/recommended',
     'plugin:import/recommended',
     'plugin:array-func/recommended',
@@ -79,7 +78,5 @@ module.exports = {
         singleQuote: true,
       },
     ],
-    'sonarjs/no-duplicate-string': 0,
-    'sonarjs/no-nested-template-literals': 0,
   },
 };
