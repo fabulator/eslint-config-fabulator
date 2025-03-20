@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.1.0 (2025-03-20)
+### Added
+- [ed6ada0](https://github.com/fabulator/eslint-config-fabulator/commit/ed6ada0cc4173e54ff2413f341bf48beb3fe24c2) Vitest rules
+
 ## v5.0.0 (2025-03-20)
 ### Changed
 - [09dd656](https://github.com/fabulator/eslint-config-fabulator/commit/09dd656e7c1e57ee4c9f019bd898774f183dab05) Upgrade to eslint 9 BREAKING
