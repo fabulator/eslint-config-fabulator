@@ -1,82 +1,84 @@
-// eslint-disable-next-line canonical/filename-no-index
-const jestConfig = require('./jest');
-const reactConfig = require('./react');
+import { defineConfig } from 'eslint/config';
+import reactPlugin from 'eslint-plugin-react';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import arrayFunc from 'eslint-plugin-array-func';
+import js from '@eslint/js';
+import canonical from 'eslint-plugin-canonical';
+import importPlugin from 'eslint-plugin-import';
+import tseslint from 'typescript-eslint';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:canonical/recommended',
-    'plugin:import/recommended',
-    'plugin:array-func/recommended',
-    'plugin:prettier/recommended',
-  ],
-  overrides: [
-    {
-      files: ['*.test.*'],
-      ...jestConfig,
-    },
-    {
-      files: ['*.*sx'],
-      ...reactConfig,
-    },
-    {
-      extends: ['plugin:react-hooks/recommended'],
-      files: ['use*.*sx', 'use*.js', 'use*.ts'],
-      rules: {
-        'react-hooks/exhaustive-deps': 'error',
-        'react-hooks/rules-of-hooks': 'error',
-      },
-    },
-    {
-      extends: [
-        'plugin:@typescript-eslint/strict-type-checked',
-        'plugin:typescript-sort-keys/recommended',
-        'plugin:import/typescript',
-        'plugin:prettier/recommended',
-      ],
-      files: ['*.tsx', '*.ts'],
-      parser: '@typescript-eslint/parser',
-      rules: {
-        '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            args: 'all',
-            argsIgnorePattern: '^_',
-            ignoreRestSiblings: true,
-            vars: 'all',
-          },
-        ],
-        '@typescript-eslint/non-nullable-type-assertion-style': 'error',
-        '@typescript-eslint/prefer-optional-chain': 'error',
-      },
-    },
-    {
-      files: ['*.json'],
-      plugins: ['json-format'],
-      rules: {
-        'json/sort-package-json': [2, 'standard'],
-      },
-    },
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
+export default defineConfig([
+  {
+    extends: [arrayFunc.configs.recommended],
+    rules: { 'array-func/prefer-array-from': 0 },
   },
-  plugins: ['filenames'],
-  reportUnusedDisableDirectives: true,
-  rules: {
-    'canonical/destructuring-property-newline': 0,
-    'canonical/export-specifier-newline': 0,
-    'canonical/filename-no-index': 'error',
-    'canonical/import-specifier-newline': 0,
-    'filenames/match-exported': [2, null, '\\.config.js$'],
-    'no-irregular-whitespace': 0,
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-      },
+  js.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  {
+    plugins: {
+      canonical: canonical,
+    },
+  },
+  {
+    extends: [reactHooks.configs['recommended-latest']],
+    files: ['use*.*sx', 'use*.js', 'use*.ts', '*.tsx', '*.jsx'],
+    rules: {
+      'react-hooks/exhaustive-deps': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+    },
+  },
+  {
+    extends: [reactPlugin.configs.recommended],
+    files: ['*.tsx', '*.jsx'],
+  },
+  {
+    extends: [
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
     ],
+    files: ['*.tsx', '*.ts'],
+    rules: {
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+          vars: 'all',
+        },
+      ],
+      '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+      '@typescript-eslint/prefer-optional-chain': 'error',
+    },
   },
-};
+  {
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: { ecmaVersion: 'latest' },
+    },
+    settings: {
+      'import/resolver': {
+        // You will also need to install and configure the TypeScript resolver
+        // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
+        typescript: true,
+        node: true,
+      },
+    },
+  },
+  eslintPluginPrettierRecommended,
+  {
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
+        },
+      ],
+    },
+  },
+]);
