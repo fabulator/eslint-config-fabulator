@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.0.0 (2025-03-20)
+### Changed
+- [09dd656](https://github.com/fabulator/eslint-config-fabulator/commit/09dd656e7c1e57ee4c9f019bd898774f183dab05) Upgrade to eslint 9 BREAKING
+- [74201a1](https://github.com/fabulator/eslint-config-fabulator/commit/74201a156a9826e2cb1c39bcb2b79ece3ce2ed93) Update Github Flow  dependency node to v20.19.0 (#186)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [6d90841](https://github.com/fabulator/eslint-config-fabulator/commit/6d9084148b1d22bf01339fee772c04b75bef1057) Update Github Flow  dependency node to v20.18.3 (#184)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v4.3.0 (2024-10-24)
 ### Changed
 - [8b8aef0](https://github.com/fabulator/eslint-config-fabulator/commit/8b8aef01f3329c335951a1f1ec5ea49496bc9282) Remove sonarjs - too louzy
