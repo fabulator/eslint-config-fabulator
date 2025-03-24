@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.2.0 (2025-03-24)
+### Added
+- [98ba884](https://github.com/fabulator/eslint-config-fabulator/commit/98ba88411726cc2986152b42ea2feb2c03220cc4) no-console rule
+
+### Changed
+- [db52c4a](https://github.com/fabulator/eslint-config-fabulator/commit/db52c4a1fc4167a50a86e1a34476143cf19709ba) Update Github Flow  dependency node to v22 (#185)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v5.1.0 (2025-03-20)
 ### Added
 - [ed6ada0](https://github.com/fabulator/eslint-config-fabulator/commit/ed6ada0cc4173e54ff2413f341bf48beb3fe24c2) Vitest rules
