@@ -19,7 +19,7 @@ export default defineConfig([
   },
   {
     extends: [js.configs.recommended],
-    rules: { 'no-irregular-whitespace': 'off' },
+    rules: { 'no-irregular-whitespace': 'off', 'no-console': 'error' },
   },
   {
     files: ['**/*.test.ts', '**/*.test.js', '**/*.test.jsx', '**/*.test.tsx'],
