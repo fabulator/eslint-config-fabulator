@@ -1,6 +1,37 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.3.0 (2025-10-31)
+### Changed
+- [187757a](https://github.com/fabulator/eslint-config-fabulator/commit/187757ad8a6d1336ba5d2a5591e3ed06a8c315ed) Upgrade version of eslint-plugin-react-hooks
+- [26beffc](https://github.com/fabulator/eslint-config-fabulator/commit/26beffce84d6a1740023ee58bbddff678f9cd9c9) Update Github Flow  dependency node to v22.21.0 (#213)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [cd1060e](https://github.com/fabulator/eslint-config-fabulator/commit/cd1060e4ea55540a8010caaa307d86b354848ae9) Update Github Flow  dependency node to v22.20.0 (#209)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [2e96dc1](https://github.com/fabulator/eslint-config-fabulator/commit/2e96dc1037d89c8d18f340aa37958a8f86f884ab) Update Github Flow  dependency node to v22.19.0 (#205)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [adf9e45](https://github.com/fabulator/eslint-config-fabulator/commit/adf9e45561b8143cc0026529af88de6f432b1991) Update Github Flow  dependency node to v22.18.0 (#202)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [8a56bca](https://github.com/fabulator/eslint-config-fabulator/commit/8a56bcab0ed8b2322a9923ee97a79939c038525d) Update Github Flow  dependency node to v22.17.1 (#200)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [52020bb](https://github.com/fabulator/eslint-config-fabulator/commit/52020bb29a6750794bd5c1872aadcaf0721e2df3) Update Github Flow  dependency node to v22.17.0 (#197)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [d48f3d0](https://github.com/fabulator/eslint-config-fabulator/commit/d48f3d0aaef338a025c972c6dc0dc209cc928676) Update Github Flow  dependency node to v22.16.0 (#193)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [d7cbab1](https://github.com/fabulator/eslint-config-fabulator/commit/d7cbab155655d167aa1bc8d0dd410080c67ed409) Update Github Flow  dependency node to v22.15.1 (#192)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [28af623](https://github.com/fabulator/eslint-config-fabulator/commit/28af6239e7c2afe48e10e16e87674c5ad3b66eaa) Update Github Flow  dependency node to v22.15.0 (#189)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v5.2.0 (2025-03-24)
 ### Added
 - [98ba884](https://github.com/fabulator/eslint-config-fabulator/commit/98ba88411726cc2986152b42ea2feb2c03220cc4) no-console rule
