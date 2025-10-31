@@ -95,7 +95,7 @@ export default defineConfig([
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
     ],
-    files: ['**/*.{ts|tsx}'],
+    files: ['**/*.{ts,tsx}'],
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
       '@typescript-eslint/restrict-template-expressions': [
