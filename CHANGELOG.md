@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.3.1 (2025-10-31)
+### Fixed
+- [b3fd9ad](https://github.com/fabulator/eslint-config-fabulator/commit/b3fd9ad4b7a8429cdd727a9a04b5fd4655d63fc7) Extension glob for typescript files
+
 ## v5.3.0 (2025-10-31)
 ### Changed
 - [187757a](https://github.com/fabulator/eslint-config-fabulator/commit/187757ad8a6d1336ba5d2a5591e3ed06a8c315ed) Upgrade version of eslint-plugin-react-hooks
