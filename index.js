@@ -67,7 +67,7 @@ export default defineConfig([
     },
   },
   {
-    extends: [reactHooks.configs['recommended-latest']],
+    extends: [reactHooks.configs.flat['recommended-latest']],
     files: ['**/use*.*sx', '**/use*.js', '**/use*.ts', '**/*.tsx', '**/*.jsx'],
     rules: {
       'react-hooks/exhaustive-deps': 'error',
