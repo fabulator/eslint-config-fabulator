@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.3.2 (2025-10-31)
+### Fixed
+- [60b3217](https://github.com/fabulator/eslint-config-fabulator/commit/60b3217ce493c215bed58032fcc8a255e991cd17) Definition for react hook config
+
 ## v5.3.1 (2025-10-31)
 ### Fixed
 - [b3fd9ad](https://github.com/fabulator/eslint-config-fabulator/commit/b3fd9ad4b7a8429cdd727a9a04b5fd4655d63fc7) Extension glob for typescript files
