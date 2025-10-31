@@ -22,7 +22,7 @@ export default defineConfig([
     rules: { 'no-irregular-whitespace': 'off', 'no-console': 'error' },
   },
   {
-    files: ['**/*.test.ts', '**/*.test.js', '**/*.test.jsx', '**/*.test.tsx'],
+    files: ['**/*.test.{js,ts,jsx,tsx}'],
     plugins: {
       vitest,
     },
@@ -39,11 +39,7 @@ export default defineConfig([
         'error',
         {
           devDependencies: [
-            '**/*.config.js',
-            '**/*.config.ts',
-            '**/*.setup.ts',
-            '**/*.test.ts',
-            '**/*.test.tsx',
+            '**/*.{test,setup,config}.{ts,tsx,js,mjs}',
             '**/lang/**/*.*',
           ],
         },
@@ -83,7 +79,7 @@ export default defineConfig([
       reactPlugin.configs.flat.recommended,
       jsxA11y.flatConfigs.recommended,
     ],
-    files: ['**/*.tsx', '**/*.jsx'],
+    files: ['**/*.{jsx,tsx}'],
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/display-name': 'off',
@@ -99,7 +95,7 @@ export default defineConfig([
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
     ],
-    files: ['**/*.tsx', '**/*.ts'],
+    files: ['**/*.{ts|tsx}'],
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
       '@typescript-eslint/restrict-template-expressions': [
