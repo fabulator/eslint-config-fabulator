@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v6.1.0 (2026-11-24)
+### Fixed
+- [2742a44](https://github.com/fabulator/eslint-config-fabulator/commit/2742a444067a61841fc50c7eea53a9c95446ce73) Apply Vitest rules only in projects that use Vitest (#247)
+
+Projects testing with node:test got Vitest errors on *.test.js files and the autofix
+rewrote node:test imports to vitest. Vitest rules are now enabled only when vitest
+is resolvable from the project root.
+
+Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
+
 ## v6.0.1 (2026-11-24)
 ### Fixed
 - [3fd8792](https://github.com/fabulator/eslint-config-fabulator/commit/3fd8792ad28c313952e9e0d127fa1f5f655bee95) Publish to npm via trusted publishing (#245)
