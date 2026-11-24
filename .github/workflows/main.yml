@@ -2,20 +2,39 @@ name: Build
 
 on: [push]
 
+# Runs on master are never cancelled (a half-finished release leaves a tag without a published package),
+# older runs on other branches are cancelled when a newer commit is pushed.
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+
+# The release pushes with GHUB_BOT_TOKEN, the default token only needs to read the repository.
+permissions:
+    contents: read
+    id-token: write # npm trusted publishing (OIDC) + provenance
+
 jobs:
     build:
         runs-on: ubuntu-latest
+        timeout-minutes: 15
         steps:
-            - uses: actions/checkout@v5
-            - name: Use Node.js 24.x
-              uses: actions/setup-node@v6
+            - uses: actions/checkout@v7
               with:
-                  node-version: 24.22.3
-            - name: NPM Build and Test
-              run: |
-                  npm ci
-                  npm run lint
-                  npm run release
+                  # semantic-release needs the full history and tags
+                  fetch-depth: 0
+                  # do not let the read-only GITHUB_TOKEN override GHUB_BOT_TOKEN when pushing the release commit
+                  persist-credentials: false
+            - name: Use Node.js 26.x
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 26.13.1
+            - name: Install dependencies
+              run: npm ci
+            - name: Lint
+              run: npm run lint
+            - name: Release
+              if: github.ref == 'refs/heads/master'
+              run: npm run release
               env:
                   GITHUB_TOKEN: ${{ secrets.GHUB_BOT_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
