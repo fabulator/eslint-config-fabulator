@@ -25,7 +25,8 @@ There are no tests. To verify config changes, lint a scratch project outside the
 
 ## Release & commits
 
-- GitHub Actions (`.github/workflows/main.yml`) on every push: `npm ci` → `npm run lint` → `npm run release`. Releasing from `master` publishes to npm automatically.
+- GitHub Actions (`.github/workflows/main.yml`) on every push: `npm ci` → `npm run lint`; on `master` also `npm run release`, which publishes to npm automatically.
+- npm publishing uses **trusted publishing (OIDC)** – needs `id-token: write` in the workflow and the trusted publisher (repo + `main.yml`) configured on npmjs.com. The classic `NPM_TOKEN` requires 2FA OTP and fails in CI with `EOTP`.
 - Version is derived from commit messages by semantic-release – never bump `version` in `package.json` by hand.
 - Commit messages are checked by commitlint (husky `commit-msg` hook, `commitlint-config-fabulator`): `<Type>: <subject>` with no scope, type in PascalCase, one of `Changed`, `Fixed`, `Removed`, `Added`, `Depreciated`, `Docs`, `Test`, `InProgress`, `WIP`, `Refactored`.
 - Release type (`semantic-release-config-fabulator`): `BREAKING` anywhere in a commit **subject** → major (a `BREAKING CHANGE:` footer is NOT recognized); `Removed` → major; `Changed`/`Added`/`Refactored`/`Depreciated` → minor; `Fixed`/`Docs` → patch. `NO_RELEASE` in the latest commit subject skips the release.

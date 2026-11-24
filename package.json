@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabulator/eslint-config-fabulator.git"
+    "url": "git+https://github.com/fabulator/eslint-config-fabulator.git"
   },
   "license": "Apache-2.0",
   "author": "Michal Ozogán <michal@ozogan.eu>",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "commitlint-config-fabulator": "^6.1.0",
     "eslint": "^10.15.0",
-    "semantic-release-config-fabulator": "^7.0.0",
+    "semantic-release-config-fabulator": "^8.0.1",
     "typescript": "~6.0.3"
   },
   "peerDependencies": {
