@@ -7,7 +7,7 @@ Shared ESLint **flat config** for Fabulator projects, published to npm. ESM pack
 - `index.js` – the whole config, built with `defineConfig([...])` (from `eslint/config`). Philosophy: **everything strict** – always pick the strictest preset, and the exported config is post-processed by `warningsToErrors`, so every `warn` coming from presets becomes `error`. Blocks in order:
   - `eslint-plugin-array-func` `all` (`prefer-array-from` off)
   - `@eslint/js` recommended (`no-console: error`)
-  - `@vitest/eslint-plugin` recommended – only `**/*.test.{js,ts,jsx,tsx}` (`all` is intentionally not used, it contains mutually contradicting rules)
+  - `@vitest/eslint-plugin` recommended – only `**/*.test.{js,ts,jsx,tsx}` and only when `vitest` is resolvable from the project root (`process.cwd()`); projects testing with e.g. `node:test` get no Vitest rules (`all` is intentionally not used, it contains mutually contradicting rules)
   - `eslint-plugin-import-x` recommended + extra rules (no default export except `**/*.config.*s`, ordered imports, no cycles…), `typescript` preset for TS files
   - `eslint-plugin-react-hooks` `recommended-latest` – `use*` files and `*.jsx/tsx`
   - `@eslint-react/eslint-plugin` `strict` (`*.jsx`) / `strict-type-checked` (`*.tsx`) + `eslint-plugin-jsx-a11y-x` `strict`. Hook rules duplicated by `react-hooks` are turned off in `@eslint-react` (`reactHooksDuplicates`).
