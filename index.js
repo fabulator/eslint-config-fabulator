@@ -1,3 +1,5 @@
+import { createRequire } from 'node:module';
+import path from 'node:path';
 import eslintReact from '@eslint-react/eslint-plugin';
 import js from '@eslint/js';
 import vitest from '@vitest/eslint-plugin';
@@ -14,6 +16,20 @@ import tseslint from 'typescript-eslint';
 const JSX_FILES = ['**/*.jsx'];
 const TSX_FILES = ['**/*.tsx'];
 const TS_FILES = ['**/*.{ts,tsx,mts,cts}'];
+
+/**
+ * Vitest rules make sense only in projects that test with Vitest. Elsewhere (e.g. `node:test`)
+ * they would report false positives and their autofix would rewrite imports to `vitest`.
+ * ESLint runs from the project root, so Vitest is resolved from there.
+ */
+const usesVitest = (() => {
+  try {
+    createRequire(path.join(process.cwd(), 'package.json')).resolve('vitest');
+    return true;
+  } catch {
+    return false;
+  }
+})();
 
 // Rules covered by eslint-plugin-react-hooks (official, React Compiler based) are
 // turned off in @eslint-react so that each problem is reported only once.
@@ -52,10 +68,14 @@ const config = defineConfig([
     extends: [js.configs.recommended],
     rules: { 'no-irregular-whitespace': 'off', 'no-console': 'error' },
   },
-  {
-    files: ['**/*.test.{js,ts,jsx,tsx}'],
-    extends: [vitest.configs.recommended],
-  },
+  ...(usesVitest
+    ? [
+        {
+          files: ['**/*.test.{js,ts,jsx,tsx}'],
+          extends: [vitest.configs.recommended],
+        },
+      ]
+    : []),
   {
     extends: [importX.flatConfigs.recommended],
     rules: {
