@@ -5,23 +5,23 @@ Shared ESLint **flat config** for Fabulator projects, published to npm. ESM pack
 ## Structure
 
 - `index.js` – the whole config, built with `defineConfig([...])` (from `eslint/config`). Philosophy: **everything strict** – always pick the strictest preset, and the exported config is post-processed by `warningsToErrors`, so every `warn` coming from presets becomes `error`. Blocks in order:
-  - `eslint-plugin-array-func` `all` (`prefer-array-from` off)
-  - `@eslint/js` recommended (`no-console: error`)
+  - `eslint-plugin-unicorn` `recommended` minus opinionated rules (naming/filename case, `no-null`, `no-array-reduce`…; each `off` has a comment why). `unopinionated` is intentionally not used – it also drops many correctness rules. It replaced `eslint-plugin-array-func` (fully duplicated).
+  - `@eslint/js` recommended + strict core rules (`eqeqeq`, size limits `max-lines`/`max-lines-per-function`/`complexity`/`max-depth` – the per-function limit is off in tests)
+  - `@eslint-community/eslint-plugin-eslint-comments` recommended – disable comments need a `-- description`; rules in `UNDISABLEABLE_RULES` can't be disabled at all
   - `@vitest/eslint-plugin` recommended – only `**/*.test.{js,ts,jsx,tsx}` and only when `vitest` is resolvable from the project root (`process.cwd()`); projects testing with e.g. `node:test` get no Vitest rules (`all` is intentionally not used, it contains mutually contradicting rules)
   - `eslint-plugin-import-x` recommended + extra rules (no default export except `**/*.config.*s`, ordered imports, no cycles…), `typescript` preset for TS files
   - `eslint-plugin-react-hooks` `recommended-latest` – `use*` files and `*.jsx/tsx`
   - `@eslint-react/eslint-plugin` `strict` (`*.jsx`) / `strict-type-checked` (`*.tsx`) + `eslint-plugin-jsx-a11y-x` `strict`. Hook rules duplicated by `react-hooks` are turned off in `@eslint-react` (`reactHooksDuplicates`).
   - `typescript-eslint` `strictTypeChecked` + `stylisticTypeChecked` – TS files (consumers must provide `parserOptions.projectService`/`project`)
   - globals browser + node, `import-x/resolver-next` with TypeScript + node resolvers
-  - `eslint-plugin-prettier/recommended` with `singleQuote: true`
+  - `eslint-plugin-prettier/recommended` with `singleQuote: true`, then `curly: all` (must come after, eslint-config-prettier turns `curly` off)
 - Runtime plugins are `dependencies` (consumers get them transitively); `eslint` and `typescript` are `peerDependencies`.
 
 ## Commands
 
-- `npm run lint` / `npm run lint:fix` – lints the repo with its own config.
+- `npm run lint` / `npm run lint:fix` – lints the repo with its own config (`test/fixtures/` ignored – they contain intentional errors).
+- `npm test` – `node:test` in `test/config.test.js` lints `test/fixtures/` (typed, `projectService`) and asserts every plugin reports its expected rules and everything is an error. When adding a rule/plugin, add a violation to a fixture and the rule id to `EXPECTED_RULES`.
 - `npm run release` – semantic-release (CI only).
-
-There are no tests. To verify config changes, lint a scratch project outside the repo that imports `index.js` and contains `.ts`, `.tsx` and `.test.ts` files (with a `tsconfig.json` and `projectService: true`), and check every plugin reports.
 
 ## Release & commits
 
