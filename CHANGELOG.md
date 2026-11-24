@@ -1,6 +1,86 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v6.0.0 (2026-11-24)
+### Changed
+- [453404c](https://github.com/fabulator/eslint-config-fabulator/commit/453404c29713bcdb41ea5cc4359ec5946f6363d4) Upgrade to ESLint 10 and strictest presets BREAKING (#244)
+
+* Docs: Add CLAUDE.md with repository overview
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+* Changed: Upgrade to ESLint 10 and strictest presets BREAKING
+
+- eslint and @eslint/js 10, peer dependency eslint ^10
+- eslint-plugin-import -> eslint-plugin-import-x (rules import/* -> import-x/*)
+- eslint-plugin-react -> @eslint-react/eslint-plugin strict / strict-type-checked (rules react/* -> @eslint-react/*)
+- eslint-plugin-jsx-a11y -> eslint-plugin-jsx-a11y-x strict (rules jsx-a11y/* -> jsx-a11y-x/*)
+- remove unused eslint-plugin-canonical
+- array-func uses the "all" preset
+- all warnings from presets are reported as errors
+- import-x/no-unused-modules removed (no-op on ESLint 10)
+- typescript 6.0, peer dependency typescript ^5 || ~6.0
+- update remaining dependencies to latest versions
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+---------
+
+Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
+- [4da21cf](https://github.com/fabulator/eslint-config-fabulator/commit/4da21cfa926b20df37cc6d1daffb4827364e6551) Update Github Flow  dependency node to v24.14.1 (#227)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [7bce9cb](https://github.com/fabulator/eslint-config-fabulator/commit/7bce9cb20cbee9ecbd1d70fd88b3279bfa90a79b) Update Github Flow  dependency node to v24.14.0 (#225)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [02781a5](https://github.com/fabulator/eslint-config-fabulator/commit/02781a5645d9da2d08890c6cd4c9aaff7d1c3a92) Update Github Flow  dependency node to v24.13.1 (#224)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [7ff4594](https://github.com/fabulator/eslint-config-fabulator/commit/7ff4594e7e041bd64730546065e28159000fe61a) Update Github Flow  dependency node to v24.13.0 (#222)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [2f4b1ce](https://github.com/fabulator/eslint-config-fabulator/commit/2f4b1ced97fcae3769fb9fdbe07a1bf7a4457d13) Update Github Flow  dependency node to v24.12.0 (#220)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [84618e4](https://github.com/fabulator/eslint-config-fabulator/commit/84618e44eceabb49af609f90380866b969b4d120) Update Github Flow  dependency node to v24.11.1 (#216)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### chore(deps)
+- [28c1845](https://github.com/fabulator/eslint-config-fabulator/commit/28c18459063d013cce8d94779a67469d67035f16) changed: update github flow no_release dependency node to v24.22.3 (#243)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [31c41f8](https://github.com/fabulator/eslint-config-fabulator/commit/31c41f8e8a103fdb0c82830167d3047c9a815012) changed: update github flow no_release dependency node to v24.22.1 (#241)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [bd60a41](https://github.com/fabulator/eslint-config-fabulator/commit/bd60a41f2b188e829f5223371b01154b0a7c4c86) changed: update github flow no_release dependency node to v24.22.0 (#240)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [3e8a6cb](https://github.com/fabulator/eslint-config-fabulator/commit/3e8a6cb319d8c1ac9d9ac7af90de76d8fe3797af) changed: update github flow no_release dependency node to v24.21.0 (#239)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [b10ada7](https://github.com/fabulator/eslint-config-fabulator/commit/b10ada7c72252df15629e6c797ee24a34d4bb9dc) changed: update github flow no_release dependency node to v24.20.0 (#238)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [fbad67f](https://github.com/fabulator/eslint-config-fabulator/commit/fbad67f5729d7974ae600b54cb480e17859408f7) changed: update github flow no_release dependency node to v24.19.0 (#237)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [ebb9d98](https://github.com/fabulator/eslint-config-fabulator/commit/ebb9d984186733e8259d09d215760135e1e01ec1) changed: update github flow no_release dependency node to v24.18.1 (#236)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [46fe6f7](https://github.com/fabulator/eslint-config-fabulator/commit/46fe6f7a1d50ded9f8ef269713e85ddb4d3cea2a) changed: update github flow no_release dependency node to v24.18.0 (#233)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [7dcab4b](https://github.com/fabulator/eslint-config-fabulator/commit/7dcab4bbbb86c1ca9a6c6f7c6a2d3e25b9c28c77) changed: update github flow no_release dependency node to v24.17.0 (#232)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [176c7f9](https://github.com/fabulator/eslint-config-fabulator/commit/176c7f92295b1aea7f3d4782f74601a333c35eff) changed: update github flow no_release dependency node to v24.16.0 (#230)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [b23ae33](https://github.com/fabulator/eslint-config-fabulator/commit/b23ae336d2b29aae0254d731bf00f3a6a011e48c) changed: update github flow no_release dependency node to v24.15.0 (#228)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v5.3.2 (2025-10-31)
 ### Fixed
 - [60b3217](https://github.com/fabulator/eslint-config-fabulator/commit/60b3217ce493c215bed58032fcc8a255e991cd17) Definition for react hook config
