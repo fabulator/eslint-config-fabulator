@@ -1,6 +1,19 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v6.0.1 (2026-11-24)
+### Fixed
+- [3fd8792](https://github.com/fabulator/eslint-config-fabulator/commit/3fd8792ad28c313952e9e0d127fa1f5f655bee95) Publish to npm via trusted publishing (#245)
+
+- semantic-release-config-fabulator 8 (semantic-release 26, npm trusted publishing via OIDC)
+- workflow: id-token: write, persist-credentials: false so the release is pushed with GHUB_BOT_TOKEN
+- workflow: actions/checkout v7, actions/setup-node v7, Node.js 26.13.1
+- workflow: release only on master, concurrency, read-only default token, timeout, full git history
+- normalize repository.url in package.json
+- regenerate package-lock.json
+
+Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
+
 ## v6.0.0 (2026-11-24)
 ### Changed
 - [453404c](https://github.com/fabulator/eslint-config-fabulator/commit/453404c29713bcdb41ea5cc4359ec5946f6363d4) Upgrade to ESLint 10 and strictest presets BREAKING (#244)
