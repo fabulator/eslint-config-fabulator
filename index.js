@@ -1,21 +1,52 @@
-import { defineConfig } from 'eslint/config';
-import reactPlugin from 'eslint-plugin-react';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import arrayFunc from 'eslint-plugin-array-func';
+import eslintReact from '@eslint-react/eslint-plugin';
 import js from '@eslint/js';
-import canonical from 'eslint-plugin-canonical';
-import importPlugin from 'eslint-plugin-import';
-import tseslint from 'typescript-eslint';
-import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
 import vitest from '@vitest/eslint-plugin';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import arrayFunc from 'eslint-plugin-array-func';
+import { createNodeResolver, importX } from 'eslint-plugin-import-x';
+import jsxA11y from 'eslint-plugin-jsx-a11y-x';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import reactHooks from 'eslint-plugin-react-hooks';
+import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-// eslint-disable-next-line import/no-default-export
-export default defineConfig([
+const JSX_FILES = ['**/*.jsx'];
+const TSX_FILES = ['**/*.tsx'];
+const TS_FILES = ['**/*.{ts,tsx,mts,cts}'];
+
+// Rules covered by eslint-plugin-react-hooks (official, React Compiler based) are
+// turned off in @eslint-react so that each problem is reported only once.
+const reactHooksDuplicates = Object.fromEntries(
+  Object.keys(
+    eslintReact.configs['disable-conflict-eslint-plugin-react-hooks'].rules,
+  )
+    .map((rule) => rule.replace(/^react-hooks\//, '@eslint-react/'))
+    .map((rule) => [rule, 'off']),
+);
+
+/**
+ * Everything is strict: rules that presets enable as warnings are reported as errors.
+ * @param {import('eslint').Linter.RulesRecord} rules
+ * @returns {import('eslint').Linter.RulesRecord}
+ */
+const warningsToErrors = (rules) =>
+  Object.fromEntries(
+    Object.entries(rules).map(([name, entry]) => {
+      const [severity, ...options] = Array.isArray(entry) ? entry : [entry];
+
+      if (severity !== 'warn' && severity !== 1) {
+        return [name, entry];
+      }
+
+      return [name, options.length > 0 ? ['error', ...options] : 'error'];
+    }),
+  );
+
+const config = defineConfig([
   {
-    extends: [arrayFunc.configs.recommended],
-    rules: { 'array-func/prefer-array-from': 0 },
+    extends: [arrayFunc.configs.all],
+    rules: { 'array-func/prefer-array-from': 'off' },
   },
   {
     extends: [js.configs.recommended],
@@ -23,19 +54,14 @@ export default defineConfig([
   },
   {
     files: ['**/*.test.{js,ts,jsx,tsx}'],
-    plugins: {
-      vitest,
-    },
-    rules: {
-      ...vitest.configs.recommended.rules,
-    },
+    extends: [vitest.configs.recommended],
   },
   {
-    extends: [importPlugin.flatConfigs.recommended],
+    extends: [importX.flatConfigs.recommended],
     rules: {
-      'import/no-deprecated': 'error',
-      'import/no-empty-named-blocks': 'error',
-      'import/no-extraneous-dependencies': [
+      'import-x/no-deprecated': 'error',
+      'import-x/no-empty-named-blocks': 'error',
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: [
@@ -44,58 +70,55 @@ export default defineConfig([
           ],
         },
       ],
-      'import/no-mutable-exports': 'error',
-      'import/no-unused-modules': 'error',
-      'import/no-cycle': 'error',
-      'import/no-relative-packages': 'error',
-      'import/no-self-import': 'error',
-      'import/order': ['error', { 'newlines-between': 'never' }],
-      'import/no-default-export': 'error',
-      'import/newline-after-import': 'error',
-      'import/first': 'error',
+      'import-x/no-mutable-exports': 'error',
+      'import-x/no-cycle': 'error',
+      'import-x/no-relative-packages': 'error',
+      'import-x/no-self-import': 'error',
+      'import-x/order': ['error', { 'newlines-between': 'never' }],
+      'import-x/no-default-export': 'error',
+      'import-x/newline-after-import': 'error',
+      'import-x/first': 'error',
     },
+  },
+  {
+    files: TS_FILES,
+    extends: [importX.flatConfigs.typescript],
   },
   {
     files: ['**/*.config.*s'],
     rules: {
-      'import/no-default-export': 'off',
-    },
-  },
-  {
-    plugins: {
-      canonical: canonical,
+      'import-x/no-default-export': 'off',
     },
   },
   {
     extends: [reactHooks.configs.flat['recommended-latest']],
-    files: ['**/use*.*sx', '**/use*.js', '**/use*.ts', '**/*.tsx', '**/*.jsx'],
-    rules: {
-      'react-hooks/exhaustive-deps': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-    },
+    files: [
+      '**/use*.*sx',
+      '**/use*.js',
+      '**/use*.ts',
+      ...JSX_FILES,
+      ...TSX_FILES,
+    ],
+  },
+  {
+    extends: [eslintReact.configs.strict, jsxA11y.configs.strict],
+    files: JSX_FILES,
+    rules: reactHooksDuplicates,
   },
   {
     extends: [
-      reactPlugin.configs.flat.recommended,
-      jsxA11y.flatConfigs.recommended,
+      eslintReact.configs['strict-type-checked'],
+      jsxA11y.configs.strict,
     ],
-    files: ['**/*.{jsx,tsx}'],
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
+    files: TSX_FILES,
+    rules: reactHooksDuplicates,
   },
   {
     extends: [
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
     ],
-    files: ['**/*.{ts,tsx}'],
+    files: TS_FILES,
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
       '@typescript-eslint/restrict-template-expressions': [
@@ -116,7 +139,7 @@ export default defineConfig([
       '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/non-nullable-type-assertion-style': 'error',
       '@typescript-eslint/prefer-optional-chain': 'error',
-      '@typescript-eslint/prefer-nullish-coalescing': 0,
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
     },
   },
   {
@@ -129,12 +152,10 @@ export default defineConfig([
       reportUnusedDisableDirectives: 'error',
     },
     settings: {
-      'import/resolver': {
-        // You will also need to install and configure the TypeScript resolver
-        // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
-        typescript: true,
-        node: true,
-      },
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver(),
+        createNodeResolver(),
+      ],
     },
   },
   eslintPluginPrettierRecommended,
@@ -149,3 +170,8 @@ export default defineConfig([
     },
   },
 ]);
+
+// eslint-disable-next-line import-x/no-default-export
+export default config.map((item) =>
+  item.rules ? { ...item, rules: warningsToErrors(item.rules) } : item,
+);
