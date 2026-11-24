@@ -1,6 +1,21 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v7.0.0 (2026-11-24)
+### Changed
+- [8bea450](https://github.com/fabulator/eslint-config-fabulator/commit/8bea450257b43d720a863cc94087c1f4d15bf818) BREAKING Stricter rules, unicorn instead of array-func, disable comments require description (#248)
+
+- eslint-plugin-unicorn recommended (minus opinionated rules) replaces eslint-plugin-array-func
+- @eslint-community/eslint-plugin-eslint-comments: disable comments need a description, key rules can't be disabled
+- no-unused-vars in TS, no-non-null-assertion, prefer-nullish-coalescing, switch-exhaustiveness-check,
+  consistent-type-imports/exports, explicit-module-boundary-types
+- core: eqeqeq, curly, no-nested-ternary, no-param-reassign, prefer-const, prefer-template, object-shorthand
+- size limits: max-lines, max-lines-per-function, complexity, max-depth
+- import-x/no-cycle limited to maxDepth 10
+- tests with fixtures (npm test), package.json files field
+
+Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
+
 ## v6.1.0 (2026-11-24)
 ### Fixed
 - [2742a44](https://github.com/fabulator/eslint-config-fabulator/commit/2742a444067a61841fc50c7eea53a9c95446ce73) Apply Vitest rules only in projects that use Vitest (#247)
