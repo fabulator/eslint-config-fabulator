@@ -43,10 +43,10 @@
     "commitlint-config-fabulator": "^6.1.0",
     "eslint": "^10.15.0",
     "semantic-release-config-fabulator": "^8.0.1",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "peerDependencies": {
     "eslint": "^10",
-    "typescript": "^5 || ~6.0"
+    "typescript": "^5 || ~6.0 || ~7.0.0"
   }
 }
